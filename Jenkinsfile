@@ -2,19 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('1') {
+        stage('clone') {
             steps {
                 echo 'Hello world'
             }
         }    
-         stage('2') {
+         stage('complie') {
             steps {
-                ec 'good morining'
+                bat "javac jenkinsfile.java"
             }
          }
-         stage('3') {
+         stage('run') {
             steps {
-                echo 'good eveing'
+                bat "java jenkinsfile"
             }
          }
          
